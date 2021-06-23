@@ -54,22 +54,20 @@ body {
   .header__greeting span {
     display: block;
     position: relative;
-    font-size: 1.2em;
+    font-size: 5vw;
     font-weight: 300; }
-    @media screen and (min-width: 56.25em) {
-      .header__greeting span {
-        font-size: 5vw; } }
     .header__greeting span::after {
       content: '';
       position: absolute;
       top: 0;
-      left: 85rem;
+      left: 100rem;
       height: 100%;
       width: 200%;
       background-image: linear-gradient(to right, transparent 0, #000 30%);
       animation: fade-in-right 4s ease-out; }
       @media screen and (min-width: 56.25em) {
         .header__greeting span::after {
+          left: 85rem;
           width: 200%;
           background-image: linear-gradient(to right, transparent 0, #000 20%);
           animation: fade-in-right 2.5s ease-out; } }
