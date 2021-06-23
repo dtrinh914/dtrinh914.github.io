@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Home</title>
+    </head>
+    <body>
+        <header class="header" id='home'>
+            <nav class="navigation">
+                <button class="navigation__toggle">
+                    <span class="navigation__icon navigation__icon--1"></span>
+                    <span class="navigation__icon navigation__icon--2"></span>
+                    <span class="navigation__icon navigation__icon--3"></span>
+                </button>
+                
+                <ul class="navigation__list u-hide">
+                    <li class="navigation__list-item"><a href='#home'>Home</a></li>
+                    <li class="navigation__list-item"><a href='#about'>About</a></li>
+                    <li class="navigation__list-item"><a href='#projects'>Projects</a></li>
+                    <li class="navigation__list-item"><a href='#contact'>Contact</a></li>
+                </ul>
+            </nav>
+            <h1 class="header__greeting">
+                <span>Hi, my name is Duc Trinh</span>
+                <span>and I am a problem solver.</span>
+            </h1>
+        </header>
+
+        <main class='main'>
+            <section class="about" id='about'>
+                <div class="container">
+                    <h1 class="section-h1 u-margin-bottom-l">
+                        About Me
+                    </h1>
+
+                    <div class="about__content-container u-margin-bottom-m">
+                        <div class="about__image">
+                            <img src='imgs/profile_pic.jpeg' alt='profile picture' >
+                        </div>
+                        <p class="about__content">
+                            I graduated from UC Berkeley with a degree in Molecular Toxicology and worked
+                            as a Clinical Laboratory Scientist for many years. Although I enjoy the work, I've always
+                            had a passion for creating things and wanted a change. I am currently attending Oregon State University pursing a B.S. 
+                            in Computer Science with a graduation date of Spring, 2022. I am looking for opprotunties in tech!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects" id='projects'>
+                <div class="container">
+                    <h1 class='section-h1 u-margin-bottom-l'>Projects</h1>
+                    
+                    <article class='projects__container u-margin-bottom-l'>
+                        <h2 class='u-margin-bottom-m'>React Checkers</h2>
+                        <img class='projects__image' src='imgs/react-checkers.png' alt='react checkers app picture'>
+                        <p class='projects__links u-margin-bottom-s'>
+                        <span><a href='https://dtrinh914.github.io/react-checkers/'>Live Demo</a></span> 
+                        <span><a href='https://github.com/dtrinh914/react-checkers'>Github</a></span>
+                        </p>
+                        <p class='projects__description'>
+                            A front end implementation of the board game Checkers aka English Draughts
+                        </p>
+                        <ul class='projects__info'>
+                            <li>Built in React featuring a drag and drop user interface and an AI opponent</li>
+                        </ul>
+                    </article>
+                    <article class='projects__container u-margin-bottom-l'>
+                        <h2 class='u-margin-bottom-m'>Yet Another Chat App</h2>
+                        <video class='projects__image' src='imgs/yaca-demo.webm' poster='imgs/yaca.png' controls></video>
+                        <p class='projects__links u-margin-bottom-s'>
+                        <span><a href='https://github.com/dtrinh914/YetAnotherChatApp-YACA-'>Github</a></span>
+                        </p>
+                        <p class='projects__description'>
+                            A full stack web application that lets users form groups and chat with one another.
+                        </p>
+                        <ul class='projects__info'>
+                            <li>Designed frontend with React using Material-UI</li>
+                            <li>Implemented chat features with Socket.io and Redis pub/sub functions for scalability</li>
+                            <li>Developed a REST API backend in NodeJS and Express</li>
+                            <li>Integrated testing across application using Jest, React Testing Library, and Supertest</li>
+                            <li>Enabled peer to peer video conferencing with WebRTC and set up STUN server for NAT traversal</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <section class="contact" id='contact'>
+                <div class="container">
+                    <h1 class='section-h1 u-margin-bottom-m'>Contact</h1>
+                    <div class='contact__links u-margin-bottom-m'>
+                        <a href="https://github.com/dtrinh914">
+                            <img src='imgs/github-8-64.png'>
+                            <span>Github</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/duc-trinh-a87791109/">
+                            <img src='imgs/linkedin-64.png'>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="mailto:dtrinh@gmail.com">
+                            <img src='imgs/email-64.png'>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                    <p><span>&copy;</span> 2021 Duc Trinh</p>
+                </div>
+            </section>
+        </footer>
+
+        <script src='js/index.js'></script>
+    </body>
+</html>

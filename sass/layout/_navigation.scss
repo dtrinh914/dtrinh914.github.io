@@ -1,0 +1,95 @@
+.navigation{
+    max-width: 1200px;
+    
+    &__toggle{
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
+        background-color: transparent;
+        width: 3.5rem;
+        height: 3.5rem;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.1s;
+        z-index: 100;
+        border: 2px solid $color-white;
+        animation: top-in 1s cubic-bezier(.75,-0.1,.63,1.7);
+        background-color: rgba($color-white, 0.1);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+        &:focus{
+            outline: none;
+            background-color: rgba($color-white, 0.3);
+        }
+
+        &:hover{
+            background-color: rgba($color-white, 0.4);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        }
+
+        &:active{
+            transform: translateY(2px);
+            background-color: rgba($color-white, 0.6);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 1.5rem;
+        left: 0.3rem;
+        width: 2.5rem;
+        height: 2px;
+        background-color: $color-white;
+        display: inline-block;
+        transition: all 0.2s;
+
+        &--1{
+            top: 0.5rem;
+        }
+
+        &--3{
+            top: 2.4rem;
+        }
+    }
+
+    &__list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: var(--app-height);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        transition: all 0.3s;
+
+        display: flex;
+        flex-direction: column;
+        background-color: $color-primary;
+        z-index: 10;
+        transform: translate(0);
+
+        @supports (backdrop-filter: blur()){
+            background-color: rgba($color-primary, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    }
+
+    &__list-item{
+        font-size: 6rem;
+        text-transform: uppercase;
+
+        & a:link,
+        & a:active,
+        & a:visited{
+            text-decoration: none;
+            color: $color-white;
+        }
+
+        & a:hover{
+            color: $color-black;
+        }
+    }
+}

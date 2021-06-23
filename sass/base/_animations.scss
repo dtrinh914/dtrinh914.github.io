@@ -1,0 +1,22 @@
+@keyframes fade-in-right{
+    0%{
+        transform: translateX(-125rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes top-in{
+    0%{
+        transform: translateY(-5rem);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

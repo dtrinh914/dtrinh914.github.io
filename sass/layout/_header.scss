@@ -1,0 +1,56 @@
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--app-height);
+    color: $color-white;
+    background: $color-black;
+    position: relative;
+
+    &__greeting{
+        text-align: center;
+        overflow: hidden;
+    }
+
+    &__greeting span {
+        display: block;
+        position: relative;
+        font-size: 1.2em;
+        font-weight: 300;
+
+        @include mq(56.25em){
+            font-size: 5vw;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 85rem;
+            height: 100%;
+            width: 200%;
+            background-image: linear-gradient(to right, transparent 0, $color-black 30%);
+            animation: fade-in-right 4s ease-out;
+
+            @include mq(56.25em){
+                width: 200%;
+                background-image: linear-gradient(to right, transparent 0, $color-black 20%);
+                animation: fade-in-right 2.5s ease-out;
+            }
+
+            @include mq(122em){
+                left:80rem;
+            }
+        }
+
+        &:last-child::after{
+            animation: fade-in-right 4s ease-out 1s;
+            animation-fill-mode: backwards;
+
+            @include mq(56.25em){
+                animation: fade-in-right 2.5s ease-out 1s;
+                animation-fill-mode: backwards;
+            }
+        }
+    }
+}
