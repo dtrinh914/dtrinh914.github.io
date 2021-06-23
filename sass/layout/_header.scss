@@ -15,8 +15,12 @@
     &__greeting p{
         display: block;
         position: relative;
-        font-size: 5vw;
         font-weight: 300;
+        font-size: 1em;
+
+        @include mq(56.25em){
+            font-size: 5vw;
+        }
 
         &::after{
             content: '';
@@ -30,7 +34,6 @@
 
             @include mq(56.25em){
                 left: 85rem;
-                width: 200%;
                 background-image: linear-gradient(to right, transparent 0, $color-black 20%);
                 animation: fade-in-right 2.5s ease-out;
             }
