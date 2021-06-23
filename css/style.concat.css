@@ -34,6 +34,9 @@ a:link, a:visited {
 a:hover {
   color: #999; }
 
+span.line {
+  display: inline-block; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -51,12 +54,12 @@ body {
   .header__greeting {
     text-align: center;
     overflow: hidden; }
-  .header__greeting span {
+  .header__greeting p {
     display: block;
     position: relative;
     font-size: 5vw;
     font-weight: 300; }
-    .header__greeting span::after {
+    .header__greeting p::after {
       content: '';
       position: absolute;
       top: 0;
@@ -66,19 +69,19 @@ body {
       background-image: linear-gradient(to right, transparent 0, #000 30%);
       animation: fade-in-right 4s ease-out; }
       @media screen and (min-width: 56.25em) {
-        .header__greeting span::after {
+        .header__greeting p::after {
           left: 85rem;
           width: 200%;
           background-image: linear-gradient(to right, transparent 0, #000 20%);
           animation: fade-in-right 2.5s ease-out; } }
       @media screen and (min-width: 122em) {
-        .header__greeting span::after {
+        .header__greeting p::after {
           left: 80rem; } }
-    .header__greeting span:last-child::after {
+    .header__greeting p:last-child::after {
       animation: fade-in-right 4s ease-out 1s;
       animation-fill-mode: backwards; }
       @media screen and (min-width: 56.25em) {
-        .header__greeting span:last-child::after {
+        .header__greeting p:last-child::after {
           animation: fade-in-right 2.5s ease-out 1s;
           animation-fill-mode: backwards; } }
 
